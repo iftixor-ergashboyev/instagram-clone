@@ -26,6 +26,7 @@ class _RegisterPageState extends State<RegisterPage> {
   final _nameController = TextEditingController();
   final _passwordController = TextEditingController();
   final _emailController = TextEditingController();
+  final _nicknameController = TextEditingController();
 
   bool _isLoading = false;
 
@@ -39,6 +40,7 @@ class _RegisterPageState extends State<RegisterPage> {
     _namager.register(
       _nameController.text,
       _emailController.text,
+      _nicknameController.text,
       _passwordController.text,
       File(_xFile?.path ?? "")
     ).then((value){
@@ -98,9 +100,12 @@ class _RegisterPageState extends State<RegisterPage> {
                     radius: 60,
                     foregroundImage: FileImage(File(_xFile?.path ?? "")),
                   ),
+
                   const SizedBox(height: 30,),
                   MyField(controller: _nameController, hint: 'Username'),
                   const SizedBox(height: 15,),
+                  MyField(controller: _nicknameController, hint: 'Nickname'),
+                  const SizedBox(height: 15),
                   MyField(controller: _emailController, hint: 'Email'),
                   const SizedBox(height: 15,),
                   PasswordField(controller: _passwordController, hint: 'Password'),

@@ -27,6 +27,7 @@ class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
+    _manager.getCurrectUser();
     return Scaffold(
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
