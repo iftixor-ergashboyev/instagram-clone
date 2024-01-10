@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MyBottom extends StatelessWidget {
-  const MyBottom({super.key, required this.onClick, required this.text});
+class MyButton extends StatelessWidget {
+  const MyButton({super.key, required this.onClick, required this.text});
   final void Function() onClick;
   final String text;
 

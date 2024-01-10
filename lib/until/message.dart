@@ -1,12 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void showErrorMessage(BuildContext context, String message) {
   ScaffoldMessenger.of(context)
       .showSnackBar(SnackBar(content: Text(message),
-  backgroundColor: Colors.redAccent,));
+      backgroundColor: Colors.redAccent));
 }
-void showSuccessMessage(BuildContext context, String message) {
+
+void showSuccessMessage(BuildContext context, String message){
   ScaffoldMessenger.of(context)
-      .showSnackBar(SnackBar(content: Text(message),backgroundColor: Colors.greenAccent,));
+      .showSnackBar(SnackBar(content: Text(message),
+      backgroundColor: const Color(0xFF0D700F)));
 }
